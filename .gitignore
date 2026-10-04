@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+.DS_Store
+*.log
+npm-debug.log*
+source-frames/
+/hero/
+/public/hero/
