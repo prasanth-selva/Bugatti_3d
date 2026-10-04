@@ -1,0 +1,3 @@
+:HL["/Bugatti_3d/_next/static/chunks/27ax54cx0gq49.css","style"]
+:HL["/Bugatti_3d/hero-webp/frame_0001.webp","image",{"fetchPriority":"high"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"UEk5LsTTAWTRWlIr8XFTa"}
