@@ -21,4 +21,17 @@ The converter naturally sorts the detected PNG naming pattern, emits sequential 
 
 ## Build and deployment
 
-`npm run build` creates the standard Next.js production build and applies one-year immutable caching to `/hero-webp/*`. For GitHub Pages, run `npm run build:pages`; it creates an export with the `/Bugatti_3d` base path. Publish the contents of `out/` to the `gh-pages` branch (for example, with `git subtree push --prefix out origin gh-pages`). GitHub Pages must use the `gh-pages` branch root as its source.
+`npm run build` creates the standard Next.js production build and applies one-year immutable caching to `/hero-webp/*`. For GitHub Pages, run `npm run build:pages`; it creates an export with the `/Bugatti_3d` base path. To update the published branch from the repository root:
+
+```bash
+git fetch origin gh-pages
+git worktree add --detach ../Bugatti_3d-pages origin/gh-pages
+git -C ../Bugatti_3d-pages rm -r -f --ignore-unmatch .
+cp -a out/. ../Bugatti_3d-pages/
+git -C ../Bugatti_3d-pages add -A
+git -C ../Bugatti_3d-pages commit -m "Deploy static site"
+git -C ../Bugatti_3d-pages push origin HEAD:gh-pages
+git worktree remove ../Bugatti_3d-pages
+```
+
+GitHub Pages must use the `gh-pages` branch root as its source.
