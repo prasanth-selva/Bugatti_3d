@@ -1,0 +1,7 @@
+{
+  "frameCount": 150,
+  "width": 848,
+  "height": 480,
+  "bgColor": "#04120f",
+  "pattern": "ezgif-frame-{index:03}.png; natural order; every 2nd frame retained"
+}
