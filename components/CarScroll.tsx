@@ -80,7 +80,8 @@ export default function CarScroll({ onProgress, onReady, onBackground, onError }
     }
     if (!image?.naturalWidth || !image.naturalHeight) return;
 
-    const scale = Math.min(width / image.naturalWidth, height / image.naturalHeight);
+    // Cover the full viewport; centered overflow is clipped by the canvas edges.
+    const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
     const drawWidth = image.naturalWidth * scale;
     const drawHeight = image.naturalHeight * scale;
     const originX = (width - drawWidth) / 2;
